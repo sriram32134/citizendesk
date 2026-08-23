@@ -1,0 +1,54 @@
+/* =========================
+   MOBILE ONLY FIXES
+   ========================= */
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .hero-mobile h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.2;
+  }
+
+  .hero-mobile p {
+    font-size: 1.1rem !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column !important;
+  }
+
+  .hero-buttons a,
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  /* HORIZONTAL SCROLL SECTIONS */
+  .mobile-scroll {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .mobile-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-scroll > div {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  /* DEPARTMENT CARDS */
+  .dept-showcase-card {
+    min-height: 260px !important;
+  }
+
+  /* EASY STEPS CARDS */
+  .step-card {
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+}

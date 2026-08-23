@@ -1,0 +1,87 @@
+/* ================= MODAL OVERLAY ================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= MODAL BOX ================= */
+.modal-box {
+  position: relative;
+  z-index: 2001;
+
+  width: 95%;
+  max-width: 900px;
+  max-height: 90vh;
+
+  background: #ffffff;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* 🔥 critical */
+}
+
+/* ================= HEADER (FIRST CHILD) ================= */
+.modal-box > div:first-child {
+  flex-shrink: 0;
+}
+
+/* ================= BODY (SECOND CHILD) ================= */
+.modal-box > div:nth-child(2) {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ================= FOOTER (LAST CHILD) ================= */
+.modal-box > div:last-child {
+  flex-shrink: 0;
+}
+
+/* ================= IMAGE ================= */
+.modal-box img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+/* ================= STATUS PILL ================= */
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.status-pill.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-pill.accepted {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status-pill.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-pill.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .modal-box {
+    max-height: 95vh;
+  }
+}
